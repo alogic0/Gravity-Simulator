@@ -259,7 +259,6 @@ define([
 		canvas.onmousedown = function (e) {
 			if (e.which === 1) {
 				// console.log('left mouse click');
-				// console.log(spacetime.getSpace().length);
                 if(mouse.state === 'drag') {
                     massBuilder(e);
                 } else if ((mouse.state != 'placement' && mouse.orbit == 'auto')) { //if user was trying to put an auto-orbiting mass, and clicked left button, then he is probably trying to cancel. Cancel then.
@@ -293,8 +292,10 @@ define([
 		};
 
 		canvas.onmousemove = function (e) {
+			
 			mouseMove(e);
 		}
+		var spacetimeId = setInterval(function() {document.getElementById('spacetime').innerHTML = spacetime.getSpace().length;}, 300);
 	}
 
 	return guiApi;
