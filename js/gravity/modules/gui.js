@@ -295,7 +295,6 @@ define([
 			
 			mouseMove(e);
 		}
-		var spacetimeId = setInterval(function() {document.getElementById('spacetime').innerHTML = spacetime.getSpace().length;}, 300);
 	}
 
 	return guiApi;

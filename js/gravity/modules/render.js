@@ -301,6 +301,8 @@ define(['jquery', 'underscore'], function($, _){
 		};
 
 		renderMassBuilder();		
+
+		document.getElementById('spacetime').innerHTML = spacetime.length
 	}
 
 	// -----------
